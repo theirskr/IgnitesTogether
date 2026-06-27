@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IgnitesTogether | Fueling Global Change</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="luxury-bg-wrapper">
+        <div class="luxury-bg-image"></div>
+        <div class="luxury-bg-overlay"></div>
+    </div>
+
+    <header class="navbar">
+        <div class="logo">Ignites<span>Together</span></div>
+        <button class="btn-secondary nav-cta">Join Syndicate</button>
+    </header>
+
+    <main class="hero-container">
+        
+        <section class="hero-content">
+            <div class="badge">A Global Philanthropy Initiative</div>
+            <h1 class="hero-title">
+                Ignite hope.<br>
+                Shape the <em>tomorrow</em><br>
+                they deserve.
+            </h1>
+            <p class="hero-subtitle">
+                An elite syndicate of collective giving. We channel clean capital directly into high-impact global projects, transforming structural charity into measurable legacy.
+            </p>
+            
+            <div class="cta-group">
+                <button class="btn-primary" id="initiate-donation">Contribute Capital</button>
+                <div class="live-counter">
+                    <span class="pulse-dot"></span>
+                    <span id="counter-amount">₹2,489,150</span> Raised This Month
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="modal-overlay" id="donation-modal">
+        <div class="modal-card animate-pop">
+            
+            <div class="modal-bg-wrapper">
+                <div class="modal-bg-image"></div>
+                <div class="modal-bg-overlay"></div>
+            </div>
+
+            <button class="close-modal">&times;</button>
+            
+            <div class="modal-header">
+                <h2>Direct Allocation</h2>
+                <p>Select a sector and scaling metric to calculate funding.</p>
+            </div>
+
+            <div class="matrix-grid">
+                <div class="matrix-card active" data-rate="40" data-type="Food">
+                    <div class="matrix-icon">🍲</div>
+                    <h3>Nutritional Support</h3>
+                    <p class="rate-tag">₹40 / child</p>
+                </div>
+                <div class="matrix-card" data-rate="100" data-type="Study">
+                    <div class="matrix-icon">📚</div>
+                    <h3>Academic Mentorship</h3>
+                    <p class="rate-tag">₹100 / child</p>
+                </div>
+                <div class="matrix-card" data-rate="80" data-type="Clothes">
+                    <div class="matrix-icon">👕</div>
+                    <h3>Seasonal Apparel</h3>
+                    <p class="rate-tag">₹80 / child</p>
+                </div>
+                <div class="matrix-card" data-rate="250" data-type="Shelter">
+                    <div class="matrix-icon">🏡</div>
+                    <h3>Secure Housing</h3>
+                    <p class="rate-tag">₹250 / child</p>
+                </div>
+            </div>
+
+            <div class="calc-control-group">
+                <label for="child-count">Target Impact Multiplier (Number of Children)</label>
+                <div class="stepper-input">
+                    <button type="button" id="step-decrement">−</button>
+                    <input type="number" id="child-count" value="1" min="1" max="100">
+                    <button type="button" id="step-increment">+</button>
+                </div>
+            </div>
+
+            <div class="price-summary-panel">
+                <div class="summary-line">
+                    <span class="summary-label">Selected Layer:</span>
+                    <span id="summary-type-display">Food Support</span>
+                </div>
+                <div class="summary-line primary-total">
+                    <span>Total Required Valuation</span>
+                    <span id="summary-price-display">₹40</span>
+                </div>
+            </div>
+
+            <button class="btn-primary full-width" id="confirm-investment">Authorize Capital Pool Transfer</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
